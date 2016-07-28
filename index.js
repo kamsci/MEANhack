@@ -6,7 +6,7 @@ var path = require('path');
 var mongoose = require('mongoose')
 var Product = require('./models/product');
 // Identify url where database lives
-mongoose.connect('mongodb://localhost/MEANhack');
+mongoose.connect('mongodb://localhost/products');
 
 // static folder to include other js, etc files
 app.use(express.static(__dirname + '/public/'));
@@ -19,10 +19,10 @@ app.use(require('morgan')('dev'));
 app.use('/api/products', require('./controllers/products'));
 
 
-// home page route
-app.get('/', function(req, res) {
-  res.send('Reduce Reuse Recreate');
-});
+// // home page route
+// app.get('/', function(req, res) {
+//   res.send('Reduce Reuse Recreate');
+// });
 
 // angular route
 app.get('/*', function(req, res) {
