@@ -18,7 +18,7 @@ router.route('/')
 
   router.route('/:id')
     .get(function(req, res) {
-      Product.findById(req.params.id, function(err, recipe) {
+      Product.findById(req.params.id, function(err, product) {
         if (err) return res.status(500).send(err);
         return res.send(product);
       });

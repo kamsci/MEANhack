@@ -1,4 +1,4 @@
-var app = angular.module('ReuseApp', ['ui.router', 'ReuseCtrl']);
+var app = angular.module('ReuseApp', ['ui.router', 'ngResource']);
 
 app.config([
   '$stateProvider',
@@ -9,7 +9,7 @@ app.config([
 
     $stateProvider.state('home', {
       url: '/',
-      templateUrl: 'views/index.html',
+      templateUrl: 'views/main.html',
       controller: 'HomeCtrl'
     })
     .state('searchProduct', {
@@ -33,4 +33,30 @@ app.config([
     });
 
     $locationProvider.html5Mode(true);
+}]);
+
+app.controller('HomeCtrl', ['$scope', 'Product', function($scope, Product) {
+  $scope.product = [];
+
+  Product.query(function success(data) {
+    $scope.products = data;
+  }, function error(data) {
+    console.log(data);
+  });
+ }]);
+
+app.controller('ShowProductCtrl', ['$scope', '$stateParams', 'Product', function($scope, $stateParams, Product) {
+  $scope.product = {};
+  console.log($stateParams.id);
+  Product.get({id: $stateParams.id}, function success(data) {
+    $scope.product=data;
+    console.log(data);
+  }, function error(data) {
+    console.log(data);
+  });
+}]);
+
+
+app.factory('Product', ['$resource', function($resource) {
+  return $resource('/api/products/:id');
 }]);
