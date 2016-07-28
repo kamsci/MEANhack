@@ -1,8 +1,17 @@
+var app = angular.module('ReuseCtrls', [])
+
 // Home Ctrl
 
-var app = angular.module('RecipeCtrls', ['RecipeServices'])
-app.controller('HomeCtrl', ['$scope', 'Recipe', function($scope, Recipe) {
-  $scope.recipes = [];
+app.controller('HomeCtrl', ['$scope', 'Product', function($scope, Product) {
+  $scope.product = [];
+
+  Recipe.query(function success(data) {
+    $scope.product = data;
+  }, function error(data) {
+    console.log(data);
+  });
+}])
+
 
 
 

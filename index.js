@@ -19,10 +19,10 @@ app.use(require('morgan')('dev'));
 app.use('/api/products', require('./controllers/products'));
 
 
-// home page route
-app.get('/', function(req, res) {
-  res.send('Reduce Reuse Recreate');
-});
+// // home page route
+// app.get('/', function(req, res) {
+//   res.send('Reduce Reuse Recreate');
+// });
 
 // angular route
 app.get('/*', function(req, res) {
