@@ -1,13 +1,15 @@
 var mongoose = require('mongoose');
 
 var ProductSchema = new mongoose.Schema({
-  title: String,
   product: String,
+  items: String,
   description: String,
-  image: String,
-  video: String
+  media: [{
+    mediaType: String,
+    url: String
+  }]
 });
 
 module.exports = mongoose.model('Product', ProductSchema);
 
-module.exports = Product;
+
