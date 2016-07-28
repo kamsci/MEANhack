@@ -6,7 +6,7 @@ var path = require('path');
 var mongoose = require('mongoose')
 var Product = require('./models/product');
 // Identify url where database lives
-mongoose.connect('mongodb://localhost/MEANhack');
+mongoose.connect('mongodb://localhost/products');
 
 // static folder to include other js, etc files
 app.use(express.static(__dirname + '/public/'));

@@ -24,7 +24,7 @@ app.config([
     })
     .state('showProduct', {
       url: '/products/:id',
-      templateUrl: 'views/showProduct.html',
+      templateUrl: 'views/showproduct.html',
       controller: 'ShowProductCtrl'
     })
     .state('404', {

@@ -15,7 +15,15 @@ app.controller('HomeCtrl', ['$scope', 'Recipe', function($scope, Recipe) {
 
 
 // Show Product Ctrl
-
+app.controller('ShowProductCtrl', ['$scope' '$stateParams', 'Product', function($scope, $stateParams, Product) {
+  $scope.product = {};
+  Product.get({id: $stateParams.id}, function success(data) {
+    $scope.product=data;
+    console.log($scope.product);
+  }, function error(data) {
+    console.log(data);
+  });
+}]);
 
 
 
