@@ -1,0 +1,5 @@
+<div class="well" ng-repeat="product in products track by product._id">
+       <h1>{{product.product}}</h1>
+       <p>{{product.items}}</p>
+       <a ng-href="/products/{{product._id}}">More Info</a>
+</div>
