@@ -1,4 +1,4 @@
-var app = angular.module('ReuseCtrls', [])
+var app = angular.module('ReuseCtrl', [])
 
 // Home Ctrl
 

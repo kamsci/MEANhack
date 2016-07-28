@@ -14,7 +14,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-resource.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/controllers.js"></script>
+    <script src="js/controller.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,11 +23,13 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body ng-app="ReuseApp">
+  <body ng-app="ReuseApp" ng-controller="HomeCtrl">
     <div class="container">
       <h1 class="text-center">Hello Worldg</h1>
+        <div class="container" ng-repeat="">
+
+        </div>
       <div ui-view></div>
     </div>
-     <script src="Hello World"></script>
   </body>
 </html>

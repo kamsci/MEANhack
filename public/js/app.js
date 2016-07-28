@@ -32,5 +32,4 @@ app.config([
       templateUrl: 'views/404.html'
     });
 
-    $locationProvider.html5Mode(true);
 }]);
