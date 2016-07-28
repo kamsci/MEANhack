@@ -1,24 +1,28 @@
-<h1>New Recycling Idea</h1>
-
 <form ng-submit="createRecycleingIdea()">
-  <div class="form-group">
-    <label for="product">Product</label>
-    <input type="text" class="form-control" id="title" ng-model="newRecyclingIdea.product">
-  </div>
 
+    <h1>New Recycling Idea</h1>
+
+    <div class="form-group">
+    <label for="product">Product</label>
+    <input type="text" class="form-control" id="title" placeholder="Enter end product" ng-model="newRecyclingIdea.product">
+  </div>
+<br>
   <div class="form-group">
     <label for="item">Item</label>
-    <textarea class="from-control" id="item" ng-model="newRecyclingIdea.description"></textarea>
-
+    <textarea class="from-control" id="item" placeholder="Enter product to be recycled "ng-model="newRecyclingIdea.description"></textarea>
+<br>
+<br>
   <div class="form-group">
     <label for="description">Description</label>
-    <textarea class="form-control" id="description" ng-model="newRecyclingIdea.description"></textarea>
+    <textarea class="form-control" id="description" placeholder="Description" ng-model="newRecyclingIdea.description"></textarea>
   </div>
-
+<br>
   <div class="form-group">
   <label for="media">Media</label>
-  <input type="media" class="form-control" id="media" placeholder="" ng-model="newRecyclingIdea.media">
+  <input type="media" class="form-control" id="media" placeholder="Add img or url here" ng-model="newRecyclingIdea.media">
   </div>
+  <br>
+  <br>
 
   <button type="submit" class="btn btn-primary">Submit</button>
 
