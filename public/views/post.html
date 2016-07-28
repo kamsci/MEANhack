@@ -1,5 +1,7 @@
+<div class="container">
+
+
 <form ng-submit="createProduct()">
-<a href="/" class="btn btn-primary">Home</a>
     <h1>New Recycling Idea</h1>
 
     <div class="form-group">
@@ -8,7 +10,7 @@
   </div>
 <br>
   <div class="form-group">
-    <label for="item">Items</label>
+    <label for="item">Items</label> <br>
     <textarea class="from-control" id="item" placeholder="Enter product to be recycled" ng-model="product.items"></textarea>
 <br>
 <br>
@@ -26,10 +28,9 @@
     <label for="url">Url</label>
     <input type="url" class="form-control" id="url" placeholder="Add url here" ng-model="product.media[0].url">
   </div>
-<br>
   <br>
-
-  <button type="submit" class="btn btn-primary">Submit</button>
-
+  <br>
+  <a href="/" class="btn btn-danger">Cancel</a>
+  <button type="submit" class="btn btn-success">Submit</button>
   </form>
-
+</div>
