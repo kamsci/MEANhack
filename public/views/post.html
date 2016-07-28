@@ -1,9 +1,26 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title></title>
-</head>
-<body>
+<h1>New Recycling Idea</h1>
 
-</body>
-</html>
+<form ng-submit="createRecycleingIdea()">
+  <div class="form-group">
+    <label for="product">Product</label>
+    <input type="text" class="form-control" id="title" ng-model="newRecyclingIdea.product">
+  </div>
+
+  <div class="form-group">
+    <label for="item">Item</label>
+    <textarea class="from-control" id="item" ng-model="newRecyclingIdea.description"></textarea>
+
+  <div class="form-group">
+    <label for="description">Description</label>
+    <textarea class="form-control" id="description" ng-model="newRecyclingIdea.description"></textarea>
+  </div>
+
+  <div class="form-group">
+  <label for="media">Media</label>
+  <input type="media" class="form-control" id="media" placeholder="" ng-model="newRecyclingIdea.media">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+  </form>
+
