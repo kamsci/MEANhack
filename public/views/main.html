@@ -1,7 +1,17 @@
-<a class="btn btn-primary" href="/products/new">Add New Idea</a>
+<div id="h">
+  <div class="logo">Reuse</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 centered">
+        <h1>Reduce, Reuse, Recycle</h4>
+        <p><a href="/products/new" class="btn btn-conf-2 btn-purple">Add New Product</a></p>
+      </div>
+    </div><!--/row-->
+  </div><!--/container-->
+</div><!-- /H -->
 
 <div class="well" ng-repeat="product in products track by product._id">
-       <h1>{{product.product}}</h1>
-       <p>{{product.items}}</p>
-       <a ng-href="/products/{{product._id}}">More Info</a>
+ <h1>{{product.product}}</h1>
+ <p>{{product.items}}</p>
+ <a ng-href="/products/{{product._id}}">More Info</a>
 </div>
