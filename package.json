@@ -26,5 +26,19 @@
     "express": "^4.13.4",
     "mongoose": "^4.5.7",
     "morgan": "^1.7.0"
-  }
+  },
+  "description": "---",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamsci/MEANhack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/kamsci/MEANhack/issues"
+  },
+  "homepage": "https://github.com/kamsci/MEANhack#readme"
 }
