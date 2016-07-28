@@ -19,7 +19,7 @@ app.config([
     })
     .state('newProduct', {
       url: '/products/new',
-      templateUrl: 'views/newProduct.html',
+      templateUrl: 'views/post.html',
       controller: 'NewProductCtrl'
     })
     .state('showProduct', {
@@ -54,6 +54,27 @@ app.controller('ShowProductCtrl', ['$scope', '$stateParams', 'Product', function
   }, function error(data) {
     console.log(data);
   });
+}]);
+
+app.controller('NewProductCtrl', ['$scope', '$location', 'Product', function($scope, $location, Product) {
+  $scope.product = {
+    product: '',
+    items: '',
+    description: '',
+    media: [{
+      mediaType: '',
+      url: ''
+    }]
+  };
+
+  $scope.createProduct = function() {
+    Product.save($scope.product, function success(data) {
+      $location.path('/');
+      console.log(data)
+    }, function error(data) {
+      console.log(data);
+    })
+  };
 }]);
 
 
